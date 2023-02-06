@@ -1,0 +1,28 @@
+name: wracks
+description: Weez is an app that helps you to manage your wifi networks.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.0.17
+  fluttertoast: ^8.1.2
+  file_picker: ^5.2.5
+  percent_indicator: ^4.2.2
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
