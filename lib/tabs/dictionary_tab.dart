@@ -18,23 +18,6 @@ class DictionariesTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dictionaries"),
-        actions: [
-          IconButton(
-            icon: const Icon(Magicoon.search_bold_outline),
-            tooltip: "Search dictionaries",
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Magicoon.folder_bold_outline),
-            tooltip: "Browse dictionaries",
-            onPressed: () {
-              openFile();
-            },
-          ),
-        ],
-      ),
       body: ListView(
         children: <Widget>[
           ListTile(

@@ -7,18 +7,15 @@ class SecurityTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Tasks"),
-        ),
         body: Center(
-          child: CircularPercentIndicator(
-            radius: 50.0,
-            lineWidth: 10,
-            percent: 0.75,
-            animation: true,
-            center: const Text("75%"),
-            progressColor: Colors.blue,
-          ),
-        ));
+      child: CircularPercentIndicator(
+        radius: 50.0,
+        lineWidth: 10,
+        percent: 0.75,
+        animation: true,
+        center: const Text("75%"),
+        progressColor: Colors.blue,
+      ),
+    ));
   }
 }

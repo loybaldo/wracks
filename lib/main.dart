@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Wracks",
       theme: ThemeData(
         brightness: Brightness.light,
-        colorSchemeSeed: Colors.blue,
+        colorSchemeSeed: Colors.indigo,
         useMaterial3: true,
       ),
       localizationsDelegates: const <LocalizationsDelegate<Object>>[

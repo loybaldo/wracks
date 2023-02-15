@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../magicoon.dart';
 
-import '../tabs/dictionary_tab.dart';
-import '../tabs/menu_tab.dart';
 import '../tabs/home_tab.dart';
 import '../tabs/security_tab.dart';
+import '../tabs/dictionary_tab.dart';
+import '../tabs/saved_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +20,7 @@ class HomeScreenState extends State<HomeScreen> {
     const HomeTab(),
     const SecurityTab(),
     const DictionariesTab(),
-    const MenuTab(),
+    const SavedTab(),
   ];
 
   @override
@@ -52,10 +52,10 @@ class HomeScreenState extends State<HomeScreen> {
                     tooltip: "Dictionary",
                     label: "Dictionary"),
                 NavigationDestination(
-                    icon: Icon(Magicoon.menu_bold_outline),
-                    selectedIcon: Icon(Magicoon.menu),
-                    tooltip: "Menu",
-                    label: "Menu"),
+                    icon: Icon(Magicoon.bookmark_bold_outline),
+                    selectedIcon: Icon(Magicoon.bookmark),
+                    tooltip: "Saved",
+                    label: "Saved"),
               ],
             )));
   }
