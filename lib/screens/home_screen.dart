@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import '../magicoon.dart';
 
 import '../tabs/dictionary_tab.dart';
 import '../tabs/menu_tab.dart';
-import '../tabs/network_tab.dart';
-import '../tabs/task_tab.dart';
+import '../tabs/home_tab.dart';
+import '../tabs/security_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,8 +17,8 @@ class HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    const NetworkTab(),
-    const TaskTab(),
+    const HomeTab(),
+    const SecurityTab(),
     const DictionariesTab(),
     const MenuTab(),
   ];
@@ -36,24 +37,23 @@ class HomeScreenState extends State<HomeScreen> {
               animationDuration: const Duration(seconds: 1),
               destinations: const [
                 NavigationDestination(
-                    icon: Icon(Icons.signal_wifi_statusbar_null_rounded),
-                    selectedIcon:
-                        Icon(Icons.signal_wifi_statusbar_4_bar_rounded),
-                    tooltip: "Networks",
-                    label: "Networks"),
+                    icon: Icon(Magicoon.home_bold_outline),
+                    selectedIcon: Icon(Magicoon.home),
+                    tooltip: "Dashboard",
+                    label: "Dashboard"),
                 NavigationDestination(
-                    icon: Icon(Icons.integration_instructions_outlined),
-                    selectedIcon: Icon(Icons.integration_instructions_rounded),
-                    tooltip: "Tasks",
-                    label: "Tasks"),
+                    icon: Icon(Magicoon.shield_bold_outline),
+                    selectedIcon: Icon(Magicoon.shield),
+                    tooltip: "Security",
+                    label: "Security"),
                 NavigationDestination(
-                    icon: Icon(Icons.inventory_2_outlined),
-                    selectedIcon: Icon(Icons.inventory_2_rounded),
-                    tooltip: "Dictionaries",
-                    label: "Dictionaries"),
+                    icon: Icon(Magicoon.package_bold_outline),
+                    selectedIcon: Icon(Magicoon.package),
+                    tooltip: "Dictionary",
+                    label: "Dictionary"),
                 NavigationDestination(
-                    icon: Icon(Icons.menu_rounded),
-                    selectedIcon: Icon(Icons.menu_open_rounded),
+                    icon: Icon(Magicoon.menu_bold_outline),
+                    selectedIcon: Icon(Magicoon.menu),
                     tooltip: "Menu",
                     label: "Menu"),
               ],

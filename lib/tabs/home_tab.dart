@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:wracks/magicoon.dart';
 
-class NetworkTab extends StatelessWidget {
-  const NetworkTab({super.key});
+class HomeTab extends StatelessWidget {
+  const HomeTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +14,12 @@ class NetworkTab extends StatelessWidget {
           shadowColor: Colors.black,
           actions: [
             IconButton(
-              icon: const Icon(Icons.search_rounded),
+              icon: const Icon(Magicoon.search_bold_outline),
               tooltip: "Search networks",
               onPressed: () {},
             ),
             IconButton(
-              icon: const Icon(Icons.more_vert_outlined),
+              icon: const Icon(Magicoon.sliders_h_bold_outline),
               tooltip: "Network options",
               onPressed: () {},
             ),

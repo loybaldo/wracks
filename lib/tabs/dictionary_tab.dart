@@ -1,5 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:wracks/magicoon.dart';
 
 class DictionariesTab extends StatelessWidget {
   const DictionariesTab({super.key});
@@ -21,12 +22,12 @@ class DictionariesTab extends StatelessWidget {
         title: const Text("Dictionaries"),
         actions: [
           IconButton(
-            icon: const Icon(Icons.search_rounded),
+            icon: const Icon(Magicoon.search_bold_outline),
             tooltip: "Search dictionaries",
             onPressed: () {},
           ),
           IconButton(
-            icon: const Icon(Icons.folder_outlined),
+            icon: const Icon(Magicoon.folder_bold_outline),
             tooltip: "Browse dictionaries",
             onPressed: () {
               openFile();
@@ -38,7 +39,7 @@ class DictionariesTab extends StatelessWidget {
         children: <Widget>[
           ListTile(
             leading: const CircleAvatar(
-              child: Icon(Icons.data_object_rounded),
+              child: Icon(Magicoon.package_bold_outline),
             ),
             title: const Text('Default Passwords'),
             subtitle: const Text("Juanito Baldo Jr."),
@@ -46,7 +47,7 @@ class DictionariesTab extends StatelessWidget {
           ),
           ListTile(
             leading: const CircleAvatar(
-              child: Icon(Icons.all_inclusive_rounded),
+              child: Icon(Magicoon.package_bold_outline),
             ),
             title: const Text('Brute Force'),
             subtitle: const Text("Juanito Baldo Jr."),

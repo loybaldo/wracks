@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class TaskTab extends StatelessWidget {
-  const TaskTab({super.key});
+class SecurityTab extends StatelessWidget {
+  const SecurityTab({super.key});
 
   @override
   Widget build(BuildContext context) {

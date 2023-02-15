@@ -26,3 +26,8 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
+
+  fonts:
+    - family: Magicoon
+      fonts:
+       - asset: fonts/Magicoon.ttf
