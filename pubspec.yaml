@@ -30,4 +30,4 @@ flutter:
   fonts:
     - family: Magicoon
       fonts:
-       - asset: fonts/Magicoon.ttf
+        - asset: fonts/Magicoon.ttf

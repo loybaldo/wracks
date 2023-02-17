@@ -26,9 +26,10 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: buildAppBar(),
         body: _children[_currentIndex],
         bottomNavigationBar: NavigationBarTheme(
-            data: const NavigationBarThemeData(surfaceTintColor: Colors.white),
+            data: const NavigationBarThemeData(elevation: 0),
             child: NavigationBar(
               selectedIndex: _currentIndex,
               onDestinationSelected: (currentIndex) => setState(() {
@@ -58,5 +59,19 @@ class HomeScreenState extends State<HomeScreen> {
                     label: "Saved"),
               ],
             )));
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      leading: IconButton(
+        icon: const Icon(
+          Magicoon.menu_bold_outline,
+          color: Colors.white,
+        ),
+        onPressed: () {},
+      ),
+      backgroundColor: Colors.indigo,
+    );
   }
 }

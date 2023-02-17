@@ -14,7 +14,7 @@ class SecurityTab extends StatelessWidget {
         percent: 0.75,
         animation: true,
         center: const Text("75%"),
-        progressColor: Colors.blue,
+        progressColor: Colors.indigo,
       ),
     ));
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:wracks/magicoon.dart';
 
 class HomeTab extends StatelessWidget {
@@ -7,55 +6,77 @@ class HomeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: ListView(
+    return Column(
       children: <Widget>[
-        ListTile(
-          leading: CircularPercentIndicator(
-            radius: 20.0,
-            lineWidth: 4,
-            percent: 0.45,
-            animation: true,
-            center: const Text(
-              "45",
-            ),
-            progressColor: Colors.blue,
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.2,
+          child: Stack(
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.only(left: 25),
+                height: MediaQuery.of(context).size.height * 0.2 - 27,
+                decoration: const BoxDecoration(
+                  color: Colors.indigo,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(36),
+                    bottomRight: Radius.circular(36),
+                  ),
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      "Wracks",
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: const Offset(0, 10),
+                        blurRadius: 50,
+                        color: Colors.indigo.withOpacity(0.23),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: const <Widget>[
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                              color: Colors.indigo,
+                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                      Icon(Magicoon.search_bold_outline)
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
-          title: const Text('i-XWiFi'),
-          subtitle: const Text("Not secured"),
-          onTap: () {},
-        ),
-        ListTile(
-          leading: CircularPercentIndicator(
-            radius: 20.0,
-            lineWidth: 4,
-            percent: 0.75,
-            animation: true,
-            center: const Text(
-              "75",
-            ),
-            progressColor: Colors.orange,
-          ),
-          title: const Text('XPRO'),
-          subtitle: const Text("Secured"),
-          onTap: () {},
-        ),
-        ListTile(
-          leading: CircularPercentIndicator(
-            radius: 20.0,
-            lineWidth: 4,
-            percent: 1,
-            animation: true,
-            center: const Text(
-              "125",
-            ),
-            progressColor: Colors.red,
-          ),
-          title: const Text('Jessa'),
-          subtitle: const Text("Secured"),
-          onTap: () {},
         ),
       ],
-    ));
+    );
   }
 }
