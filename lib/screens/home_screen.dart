@@ -43,7 +43,18 @@ class HomeScreenState extends State<HomeScreen> {
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: NavigationBarTheme(
-        data: const NavigationBarThemeData(elevation: 0),
+        data: NavigationBarThemeData(
+          elevation: 0,
+          iconTheme:
+              MaterialStateProperty.all(IconThemeData(color: kIconColor)),
+          labelTextStyle: MaterialStateProperty.all(
+            TextStyle(
+              fontSize: 12.5,
+              fontWeight: FontWeight.bold,
+              color: kIconColor,
+            ),
+          ),
+        ),
         child: NavigationBar(
           selectedIndex: _currentIndex,
           onDestinationSelected: (currentIndex) => setState(() {

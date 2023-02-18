@@ -72,9 +72,9 @@ class DashboardHeader extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Icon(
+                  Icon(
                     Magicoon.search_bold_outline,
-                    color: kPrimary,
+                    color: kIconColor,
                   )
                 ],
               ),
