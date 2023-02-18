@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:wracks/constant.dart';
 
 import 'screens/splash_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: "Wracks",
       theme: ThemeData(
         brightness: Brightness.light,
-        colorSchemeSeed: Colors.indigo,
+        colorSchemeSeed: kPrimary,
         useMaterial3: true,
       ),
       localizationsDelegates: const <LocalizationsDelegate<Object>>[
