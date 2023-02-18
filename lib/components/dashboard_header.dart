@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../generated/l10n.dart';
 import '../constant.dart';
 import '../magicoon.dart';
 
@@ -63,7 +64,7 @@ class DashboardHeader extends StatelessWidget {
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Search",
+                        hintText: S.of(context).search,
                         hintStyle: TextStyle(
                           color: kPrimary.withOpacity(0.5),
                         ),

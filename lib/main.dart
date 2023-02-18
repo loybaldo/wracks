@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:wracks/generated/l10n.dart';
 import 'package:wracks/constant.dart';
-
 import 'screens/splash_screen.dart';
 
 void main() {
@@ -21,15 +21,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       localizationsDelegates: const <LocalizationsDelegate<Object>>[
+        S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const <Locale>[
-        Locale('en', 'US'),
-        Locale('he', 'IL'),
-        // ... other locales the app supports
-      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
     );

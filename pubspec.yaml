@@ -31,3 +31,5 @@ flutter:
     - family: Magicoon
       fonts:
         - asset: fonts/Magicoon.ttf
+flutter_intl:
+  enabled: true

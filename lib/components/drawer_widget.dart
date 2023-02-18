@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constant.dart';
+import '../generated/l10n.dart';
 import '../magicoon.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -20,7 +21,7 @@ class DrawerWidget extends StatelessWidget {
             child: Text(""),
           ),
           ListTile(
-            title: const Text("Settings"),
+            title: Text(S.of(context).settings),
             leading: const Icon(
               Magicoon.settings_bold_outline,
               color: Colors.indigo,
@@ -28,7 +29,7 @@ class DrawerWidget extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: const Text("Feedback"),
+            title: Text(S.of(context).feedback),
             leading: Icon(
               Magicoon.star_bold_outline,
               color: Colors.yellow.shade800,
@@ -36,7 +37,7 @@ class DrawerWidget extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: const Text("Report a Problem"),
+            title: Text(S.of(context).report_a_problem),
             leading: Icon(
               Magicoon.send_bold_outline,
               color: Colors.orange.shade700,
@@ -44,7 +45,7 @@ class DrawerWidget extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: const Text("Terms & Conditions"),
+            title: Text(S.of(context).terms_and_conditions),
             leading: Icon(
               Magicoon.users_three_bold_outline,
               color: Colors.teal.shade500,
@@ -52,7 +53,7 @@ class DrawerWidget extends StatelessWidget {
             onTap: () {},
           ),
           ListTile(
-            title: const Text("About Us"),
+            title: Text(S.of(context).about_us),
             leading: Icon(
               Magicoon.question_circle_bold_outline,
               color: Colors.blue.shade700,

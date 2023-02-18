@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wracks/generated/l10n.dart';
 import 'package:wracks/constant.dart';
 import '../components/drawer_widget.dart';
 import '../magicoon.dart';
-
 import '../tabs/home_tab.dart';
 import '../tabs/security_tab.dart';
 import '../tabs/dictionary_tab.dart';
@@ -61,30 +61,30 @@ class HomeScreenState extends State<HomeScreen> {
             _currentIndex = currentIndex;
           }),
           animationDuration: const Duration(seconds: 1),
-          destinations: const [
+          destinations: [
             NavigationDestination(
-              icon: Icon(Magicoon.home_bold_outline),
-              selectedIcon: Icon(Magicoon.home),
-              tooltip: "Dashboard",
-              label: "Dashboard",
+              icon: const Icon(Magicoon.home_bold_outline),
+              selectedIcon: const Icon(Magicoon.home),
+              tooltip: S.of(context).dashboard,
+              label: S.of(context).dashboard,
             ),
             NavigationDestination(
-              icon: Icon(Magicoon.shield_bold_outline),
-              selectedIcon: Icon(Magicoon.shield),
-              tooltip: "Security",
-              label: "Security",
+              icon: const Icon(Magicoon.shield_bold_outline),
+              selectedIcon: const Icon(Magicoon.shield),
+              tooltip: S.of(context).security,
+              label: S.of(context).security,
             ),
             NavigationDestination(
-              icon: Icon(Magicoon.package_bold_outline),
-              selectedIcon: Icon(Magicoon.package),
-              tooltip: "Dictionary",
-              label: "Dictionary",
+              icon: const Icon(Magicoon.package_bold_outline),
+              selectedIcon: const Icon(Magicoon.package),
+              tooltip: S.of(context).dictionary,
+              label: S.of(context).dictionary,
             ),
             NavigationDestination(
-              icon: Icon(Magicoon.bookmark_bold_outline),
-              selectedIcon: Icon(Magicoon.bookmark),
-              tooltip: "Saved",
-              label: "Saved",
+              icon: const Icon(Magicoon.bookmark_bold_outline),
+              selectedIcon: const Icon(Magicoon.bookmark),
+              tooltip: S.of(context).saved,
+              label: S.of(context).saved,
             ),
           ],
         ),
