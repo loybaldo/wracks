@@ -50,6 +50,16 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Wracks`
+  String get app_name {
+    return Intl.message(
+      'Wracks',
+      name: 'app_name',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Dashboard`
   String get dashboard {
     return Intl.message(

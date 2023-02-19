@@ -31,7 +31,7 @@ class DashboardHeader extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 Text(
-                  "Wracks",
+                  S.of(context).dashboard,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

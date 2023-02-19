@@ -1,4 +1,5 @@
 {
+    "app_name": "Wracks",
     "dashboard": "Dashboard",
     "security": "Security",
     "dictionary": "Dictionary",
@@ -9,4 +10,5 @@
     "report_a_problem": "Report a Problem",
     "terms_and_conditions": "Terms & Conditions",
     "about_us": "About Us"
+    
 }
